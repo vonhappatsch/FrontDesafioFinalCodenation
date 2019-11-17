@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import imgTela from './assets/imgTela.png';
 import logo from './assets/logo.png';
 
-export default class Body extends Component {
+export default class BodyLogin extends Component {
     render() {
         return (
-
             <div className="login-body">
                 
                 <div className="row">
@@ -17,22 +17,21 @@ export default class Body extends Component {
                         
                         <img src={logo} className="img-fluid img-logo mx-auto d-block" alt="" />
                         <h1>Central de Erros</h1>
-                        <h2>Crie sua conta!</h2>
+                        <h2>Olá!</h2>
 
                         <form>
                             <div className="text-left">
-                                <label for="email">E-mail</label>
-                                <input type="email" className="" id="email" aria-describedby="emailHelp" placeholder=""></input>
+                                <label>E-mail</label>
+                                <input type="email" id="email" aria-describedby="emailHelp" placeholder="Insira o seu e-mail"></input>
                             </div>
                             <div className="text-left">
-                                <label for="senha">Senha</label>
-                                <input type="password" className="" id="senha" placeholder=""></input>
+                                <label>Senha</label>
+                                <input type="password" id="senha" placeholder="Insira a sua senha"></input>
                             </div>
-                            <a href="url">Já tenho cadastro e gostaria de entrar</a>
-                            <button type="submit" class="button">Enviar</button>
+                            <NavLink to={`/register`}>Ainda não tenho cadastro</NavLink>
+                            <button type="submit" className="button">Enviar</button>
                         </form>
                     </div>
-
                 </div>
             </div>
         );

@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import BodyLogin from './BodyLogin.js';
+import BodyRegister from './BodyRegister.js';
 import Footer from './Footer.js';
 
-class Login extends Component {
+class Register extends Component {
     render() {
         return (
 
             <div className="Login">
-                    <BodyLogin />
+                    <BodyRegister />
                     <Footer />
             </div>
         );
     }
 }
-export default Login;
+export default Register;
